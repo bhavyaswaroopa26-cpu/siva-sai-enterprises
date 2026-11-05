@@ -3,208 +3,200 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#163b2d">
-    <meta name="description" content="Discover premium Assam tea, green tea, Nilgiri tea and coffee from Siva Sai Enterprises, a trusted wholesale supplier in Rajahmundry since 1996.">
-    <meta property="og:title" content="Siva Sai Enterprises | Tea & Coffee, Since 1996">
-    <meta property="og:description" content="Your trusted wholesale partner for premium teas and coffee in Rajahmundry, Andhra Pradesh.">
-    <meta property="og:type" content="website">
-    <title>Siva Sai Enterprises | Premium Tea & Coffee Since 1996</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
+    <meta name="theme-color" content="#101b18">
+    <meta name="description" content="A bike safety companion dashboard prototype for security, trip tracking, emergency contacts, and document organization.">
+    <title>RideSafe — Bike safety dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="announcement"><span class="announcement-dot"></span> A trusted Rajahmundry tea house <span class="announcement-divider">✦</span> Serving quality since 1996</div>
+    <a class="skip-link" href="#main">Skip to dashboard</a>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#overview" aria-label="RideSafe overview">
+          <span class="brand-icon" aria-hidden="true">R</span>
+          <span><strong>ride<span>safe</span></strong><small>YOUR BIKE, LOOKED AFTER</small></span>
+        </a>
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="side-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><span class="nav-icon">⌂</span> Overview</a>
+          <a class="nav-link" href="#safety"><span class="nav-icon">◈</span> Safety tools</a>
+          <a class="nav-link" href="#documents"><span class="nav-icon">▤</span> My documents</a>
+          <a class="nav-link" href="#settings"><span class="nav-icon">⚙</span> Settings</a>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-bike">
+          <div class="bike-avatar" aria-hidden="true">⌁</div>
+          <div><strong>Classic 350</strong><small>AP 05 CD 4821</small></div>
+          <span class="online-dot" title="Sample vehicle"></span>
+        </div>
+        <div class="sidebar-foot">RIDESAFE <span>·</span> PREVIEW BUILD</div>
+      </aside>
 
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Siva Sai Enterprises home">
-        <span class="brand-mark" aria-hidden="true">S<span>✳</span></span>
-        <span class="brand-copy"><strong>SIVA SAI</strong><small>ENTERPRISES · RAJAHMUNDRY</small></span>
-      </a>
-      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="#about">Our story</a><a href="#products">Tea & coffee</a><a href="#wholesale">Wholesale</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-        <a class="nav-cta" href="#wholesale">Let’s talk <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="home">
-        <div class="hero-image" role="img" aria-label="Freshly brewed tea surrounded by aromatic tea leaves"></div>
-        <div class="hero-shade"></div>
-        <div class="hero-content">
-          <div class="eyebrow eyebrow-light"><span></span> GOOD TEA. GOOD COMPANY. SINCE 1996.</div>
-          <h1>Experience the<br>finest taste of tea<br><em>since 1996.</em></h1>
-          <p>Your trusted partner for premium tea powders, Assam teas, green teas and coffee.</p>
-          <div class="hero-actions">
-            <a class="button button-gold" href="#products">Explore our selection <span>↗</span></a>
-            <a class="button button-outline" href="#wholesale">Wholesale enquiries</a>
+      <div class="main-shell">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+          <div class="breadcrumbs">MY GARAGE <span>/</span> OVERVIEW</div>
+          <div class="topbar-right">
+            <span class="today-label" id="today-label"></span>
+            <span class="avatar" aria-label="Alex's profile">A</span>
           </div>
-          <div class="hero-footnote"><span class="hero-line"></span> Quality and freshness, thoughtfully sourced.</div>
-        </div>
-        <div class="hero-side-note">A LITTLE MORE<br>JOY IN EVERY CUP</div>
-        <div class="hero-index"><span>01</span> — 03</div>
-      </section>
+        </header>
 
-      <div class="trust-strip" aria-label="Business highlights">
-        <div><span class="trust-number">1996</span><span>Established<br>in Rajahmundry</span></div>
-        <span class="trust-separator"></span>
-        <div><span class="trust-icon">✳</span><span>Curated teas<br>& quality coffee</span></div>
-        <span class="trust-separator"></span>
-        <div><span class="trust-icon">↗</span><span>Wholesale &<br>bulk supply</span></div>
-        <span class="trust-separator"></span>
-        <div><span class="trust-icon">⌂</span><span>Local roots.<br>Reliable service.</span></div>
+        <main id="main">
+          <section class="page-content" id="overview">
+            <div class="demo-banner">
+              <span class="demo-icon">i</span>
+              <p><strong>Interactive preview</strong> — No bike tracker or emergency service is connected. Controls on this page demonstrate the app and do not control a real motorcycle.</p>
+              <button type="button" class="banner-close" aria-label="Dismiss preview notice">×</button>
+            </div>
+
+            <div class="welcome-row">
+              <div>
+                <div class="eyebrow"><span class="eyebrow-line"></span> <span id="greeting-date">TODAY</span></div>
+                <h1>Your ride,<br class="mobile-break"> <span>in good hands.</span></h1>
+                <p class="welcome-copy">A little peace of mind for every journey.</p>
+              </div>
+              <button class="button button-dark" id="lock-button" type="button"><span class="button-icon">⌑</span><span id="lock-button-text">Bike is locked</span><span class="button-arrow">↗</span></button>
+            </div>
+
+            <div class="overview-grid">
+              <article class="map-card">
+                <div class="map-topline">
+                  <div><span class="live-pip"></span><span class="map-label">BIKE LOCATION</span></div>
+                  <span class="sample-pill">SAMPLE VIEW</span>
+                </div>
+                <div class="map-art" aria-label="Decorative map illustration, not a live bike location">
+                  <svg viewBox="0 0 760 340" role="img" aria-labelledby="map-title">
+                    <title id="map-title">Illustrated sample map</title>
+                    <path class="map-road road-main" d="M-20 247 C94 214 121 90 256 124 S390 270 500 212 657 77 785 120"/>
+                    <path class="map-road road-side" d="M79 -20 C106 88 202 154 172 365 M337 -20 C300 77 355 167 330 362 M589 -20 C521 78 620 189 576 365"/>
+                    <path class="map-road road-side" d="M-20 68 C114 109 197 38 310 57 S517 106 779 53 M-20 310 C129 273 262 300 383 280 S605 243 779 292"/>
+                    <path class="map-route" d="M104 247 C165 213 167 143 257 141 S346 234 428 218 554 126 643 137"/>
+                    <g class="map-street"><text x="33" y="115">RIVER VIEW ROAD</text><text x="387" y="85">T. NAGAR</text><text x="477" y="285">MAIN BAZAAR</text><text x="204" y="315">GODAVARI BUND ROAD</text></g>
+                    <circle class="map-pulse" cx="428" cy="218" r="22"></circle>
+                    <circle class="map-pin" cx="428" cy="218" r="8"></circle>
+                  </svg>
+                  <div class="map-caption"><span class="map-caption-icon">⌖</span><span><strong id="location-title">Rajahmundry, Andhra Pradesh</strong><small id="location-detail">Sample location · tracker not connected</small></span></div>
+                  <span class="map-scale">MAP PREVIEW</span>
+                </div>
+                <div class="map-footer">
+                  <span><span class="location-dot"></span> Bike GPS <strong>Not connected</strong></span>
+                  <button class="text-button" id="phone-location-button" type="button">Use phone location <span>↗</span></button>
+                </div>
+              </article>
+
+              <article class="vehicle-card">
+                <div class="card-heading">
+                  <div><div class="eyebrow eyebrow-muted">YOUR MOTORCYCLE</div><h2>Royal Enfield<br>Classic 350</h2></div>
+                  <span class="vehicle-mark" aria-hidden="true">RE</span>
+                </div>
+                <div class="plate"><span>IND</span><strong>AP 05 CD 4821</strong></div>
+                <div class="vehicle-divider"></div>
+                <div class="status-heading"><span>Vehicle status</span><span class="sample-text">SAMPLE DATA</span></div>
+                <div class="vehicle-status-list">
+                  <div><span class="status-symbol status-green">✓</span><span>Bike security</span><strong id="security-state">Armed</strong></div>
+                  <div><span class="status-symbol status-blue">⌁</span><span>Engine</span><strong>Not connected</strong></div>
+                  <div><span class="status-symbol status-amber">◷</span><span>Last check-in</span><strong>Demo only</strong></div>
+                </div>
+                <p class="vehicle-footnote">Connect a compatible tracker to see live vehicle data.</p>
+              </article>
+            </div>
+
+            <section class="feature-section" id="safety">
+              <div class="section-title-row">
+                <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR SAFETY, YOUR WAY</div><h2>Quick controls</h2></div>
+                <span class="section-caption">Choose the features that work for you</span>
+              </div>
+              <div class="feature-grid">
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-purple">◈</span><button class="switch" type="button" role="switch" aria-checked="true" aria-label="Toggle theft alerts" data-toggle="theft-alerts"><span></span></button></div>
+                  <h3>Theft guard</h3><p>Get alerts if your bike is disturbed and request an engine stop.</p>
+                  <div class="feature-foot"><span class="feature-status"><i></i><span data-state-for="theft-alerts">Monitoring on</span></span><button class="mini-action" id="engine-stop-button" type="button">Engine stop <span>↗</span></button></div>
+                </article>
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-yellow">♩</span><button class="switch" type="button" role="switch" aria-checked="false" aria-label="Toggle bike alarm" data-toggle="alarm"><span></span></button></div>
+                  <h3>Bike alarm</h3><p>Set an alarm reminder for when you park.</p>
+                  <div class="alarm-row"><label for="alarm-time">ALARM TIME</label><input id="alarm-time" type="time" value="22:00"></div>
+                </article>
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-teal">⌁</span><span class="sample-tag">SAMPLE</span></div>
+                  <h3>Bike health</h3><p>Keep an eye on bike status and maintenance alerts.</p>
+                  <div class="feature-foot"><span class="feature-status"><i class="status-dot-muted"></i>Tracker needed</span><button class="icon-button" type="button" aria-label="View bike health information" data-toast="Live bike status needs a compatible vehicle tracker.">↗</button></div>
+                </article>
+                <article class="feature-card trip-card">
+                  <div class="feature-top"><span class="feature-icon icon-blue">➤</span><span class="sample-tag" id="trip-state">READY</span></div>
+                  <h3>Trip distance</h3><p>Record a trip using your phone’s GPS, with your permission.</p>
+                  <div class="trip-readout"><strong id="trip-distance">0.0</strong><span>km this trip</span><time id="trip-duration">00:00</time></div>
+                  <button class="mini-action" id="trip-button" type="button">Start a trip <span>↗</span></button>
+                </article>
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-green">◎</span><span class="sample-tag">TRACKER NEEDED</span></div>
+                  <h3>GPS tracking</h3><p>Find your bike or check a shared ride when a compatible tracker is connected.</p>
+                  <button class="mini-action" type="button" disabled>Bike GPS unavailable</button>
+                </article>
+                <article class="feature-card emergency-card">
+                  <div class="feature-top"><span class="feature-icon icon-red">＋</span><button class="switch" type="button" role="switch" aria-checked="false" aria-label="Toggle emergency alerts" data-toggle="emergency-alerts"><span></span></button></div>
+                  <h3>Emergency contact</h3><p>Save a trusted contact and prepare a message if you need help.</p>
+                  <button class="mini-action" id="sos-button" type="button">Set up SOS <span>↗</span></button>
+                </article>
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-yellow">⌑</span><button class="switch" type="button" role="switch" aria-checked="true" aria-label="Toggle helmet reminder" data-toggle="helmet-reminder"><span></span></button></div>
+                  <h3>Helmet reminder</h3><p>A gentle reminder to wear your helmet before every ride.</p>
+                  <div class="feature-foot"><span class="feature-status"><i></i><span data-state-for="helmet-reminder">Reminder on</span></span><span class="feature-number">07</span></div>
+                </article>
+                <article class="feature-card document-card">
+                  <div class="feature-top"><span class="feature-icon icon-indigo">▤</span><span class="sample-tag">PRIVATE</span></div>
+                  <h3>Bike documents</h3><p>Keep your RC, licence, and insurance details together on this device.</p>
+                  <a class="mini-action" href="#documents">Open document vault <span>↗</span></a>
+                </article>
+                <article class="feature-card">
+                  <div class="feature-top"><span class="feature-icon icon-slate">⌑</span><button class="switch" type="button" role="switch" aria-checked="true" aria-label="Toggle smart lock" data-toggle="smart-lock"><span></span></button></div>
+                  <h3>Lock setting</h3><p>Choose your preferred lock method for the app preview.</p>
+                  <div class="lock-setting-row"><label for="lock-method">LOCK METHOD</label><select id="lock-method"><option>PIN</option><option>Pattern</option><option>Keyboard</option></select></div>
+                </article>
+              </div>
+            </section>
+
+            <section class="documents-section" id="documents">
+              <div class="section-title-row">
+                <div><div class="eyebrow"><span class="eyebrow-line"></span> CLOSE AT HAND</div><h2>Your document vault</h2></div>
+                <button class="button button-light" id="add-document-button" type="button"><span>＋</span> Add a document</button>
+              </div>
+              <div class="privacy-note"><span class="privacy-icon">◇</span><p><strong>Your privacy matters.</strong> This preview stores document names in this browser only. Files are not uploaded or backed up. Avoid adding Aadhaar or other sensitive identity documents.</p></div>
+              <div class="document-list" id="document-list">
+                <div class="document-row sample-document"><span class="document-icon">▤</span><span class="document-name"><strong>Registration certificate</strong><small>Example document · not uploaded</small></span><span class="document-type">RC</span><span class="document-state">SAMPLE</span></div>
+                <div class="document-row sample-document"><span class="document-icon">▤</span><span class="document-name"><strong>Insurance policy</strong><small>Example document · not uploaded</small></span><span class="document-type">INS</span><span class="document-state">SAMPLE</span></div>
+              </div>
+              <input id="document-input" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple hidden>
+            </section>
+
+            <section class="settings-section" id="settings">
+              <div class="settings-copy"><div class="eyebrow"><span class="eyebrow-line"></span> MADE FOR YOUR PEACE OF MIND</div><h2>Safety starts<br>with the small things.</h2><p>Set up a trusted emergency contact, keep your vehicle details current, and always wear your helmet.</p></div>
+              <div class="settings-list">
+                <button class="settings-row" id="contact-settings-button" type="button"><span class="settings-row-icon">＋</span><span><strong>Emergency contact</strong><small id="contact-summary">No contact saved</small></span><span class="settings-arrow">↗</span></button>
+                <div class="settings-row settings-info"><span class="settings-row-icon">◈</span><span><strong>Tracker connection</strong><small>Not connected · live bike features unavailable</small></span><span class="connection-status">OFFLINE</span></div>
+                <div class="settings-row settings-info"><span class="settings-row-icon">ⓘ</span><span><strong>Preview build</strong><small>Use a compatible device and backend for real-world safety features.</small></span></div>
+              </div>
+            </section>
+          </section>
+        </main>
+        <footer class="footer"><span>RIDESAFE <span class="footer-dot">·</span> BIKE SAFETY COMPANION</span><span>Preview only · No live tracking or emergency monitoring</span></footer>
       </div>
-
-      <section class="story section-pad" id="about">
-        <div class="story-image-wrap">
-          <img class="story-image" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1000&q=85" alt="A warm cup of tea served with loose tea leaves" loading="lazy">
-          <div class="image-caption"><span>OUR STORY</span><strong>Good things take time.<br>Ours began in 1996.</strong></div>
-          <div class="since-seal"><span>ROOTED IN</span><strong>’96</strong><span>RAJAHMUNDRY</span></div>
-        </div>
-        <div class="story-copy">
-          <div class="eyebrow"><span></span> A LEGACY IN EVERY LEAF</div>
-          <h2>For the love of<br><em>a really good cup.</em></h2>
-          <p class="story-lead">Some things are best shared. For nearly three decades, we’ve helped bring the comforting ritual of good tea and coffee to homes and businesses across Rajahmundry.</p>
-          <p>Siva Sai Enterprises is a locally rooted wholesaler, supplier and distributor specialising in tea and coffee. From robust Assam CTC to gentle green teas, we focus on dependable quality, thoughtful selection and relationships that last.</p>
-          <a class="text-link" href="#contact">A little more about us <span>↗</span></a>
-          <div class="story-values"><div><strong>Since 1996</strong><small>Independent local roots</small></div><div><strong>Made for business</strong><small>Wholesale & bulk supply</small></div></div>
-        </div>
-      </section>
-
-      <section class="products section-pad" id="products">
-        <div class="section-heading">
-          <div><div class="eyebrow"><span></span> THE GOOD STUFF</div><h2>Find your next<br><em>favourite cup.</em></h2></div>
-          <p>From a bold morning brew to a mellow afternoon moment, find a tea or coffee to suit the way you like it.</p>
-        </div>
-        <div class="product-tools">
-          <div class="filter-tabs" role="group" aria-label="Filter products">
-            <button class="filter-button active" data-filter="all" aria-pressed="true">All products</button>
-            <button class="filter-button" data-filter="tea" aria-pressed="false">Tea</button>
-            <button class="filter-button" data-filter="green" aria-pressed="false">Green tea</button>
-            <button class="filter-button" data-filter="coffee" aria-pressed="false">Coffee</button>
-          </div>
-          <label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Find a product" aria-label="Search products"></label>
-        </div>
-        <div class="product-grid" id="product-grid">
-          <article class="product-card" data-category="tea" data-name="Assam CTC Tea Powder">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=750&q=80" alt="Rich Assam tea leaves" loading="lazy"><span class="product-tag">A HOUSE FAVOURITE</span><button class="quick-enquire" data-product="Assam CTC Tea Powder" aria-label="Enquire about Assam CTC Tea Powder">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Assam CTC Tea Powder</h3><span>01</span></div><p>Rich taste. Strong aroma. A satisfying, full-bodied cup.</p><div class="product-price"><span>Indicative from</span><strong>₹300 <small>/ kg</small></strong></div><a class="product-link" href="#wholesale" data-product-link="Assam CTC Tea Powder">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="tea" data-name="Assam Leaf Tea">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1563911892437-1feda0179e1b?auto=format&fit=crop&w=750&q=80" alt="Loose whole leaf tea ready to brew" loading="lazy"><button class="quick-enquire" data-product="Assam Leaf Tea" aria-label="Enquire about Assam Leaf Tea">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Assam Leaf Tea</h3><span>02</span></div><p>Premium tea leaves for a fragrant, quality brew.</p><div class="product-price"><span>Indicative from</span><strong>₹340 <small>/ kg</small></strong></div><a class="product-link" href="#wholesale" data-product-link="Assam Leaf Tea">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="green" data-name="Green Tea Leaves">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=750&q=80" alt="Fresh green tea leaves in a glass cup" loading="lazy"><span class="product-tag">A GENTLER BREW</span><button class="quick-enquire" data-product="Green Tea Leaves" aria-label="Enquire about Green Tea Leaves">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Green Tea Leaves</h3><span>03</span></div><p>A smooth, delicate choice. Available from 100g to 1kg.</p><div class="product-price"><span>Indicative from</span><strong>₹800 <small>/ kg</small></strong></div><a class="product-link" href="#wholesale" data-product-link="Green Tea Leaves">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="green" data-name="Mint Green Tea">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=750&q=80" alt="Fresh mint leaves and a cup of tea" loading="lazy"><button class="quick-enquire" data-product="Mint Green Tea" aria-label="Enquire about Mint Green Tea">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Mint Green Tea</h3><span>04</span></div><p>Refreshing mint meets gentle green tea. Multiple pack sizes.</p><div class="product-price"><span>Ask us for</span><strong>Current pricing</strong></div><a class="product-link" href="#wholesale" data-product-link="Mint Green Tea">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="tea" data-name="Nilgiri Tea">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=750&q=80" alt="A freshly brewed cup of tea" loading="lazy"><button class="quick-enquire" data-product="Nilgiri Tea" aria-label="Enquire about Nilgiri Tea">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Nilgiri Tea</h3><span>05</span></div><p>Discover our premium Nilgiri tea selection.</p><div class="product-price"><span>Ask us for</span><strong>Current pricing</strong></div><a class="product-link" href="#wholesale" data-product-link="Nilgiri Tea">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="tea" data-name="Black Tea">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=750&q=80" alt="A dark, freshly brewed black tea" loading="lazy"><button class="quick-enquire" data-product="Black Tea" aria-label="Enquire about Black Tea">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Black Tea</h3><span>06</span></div><p>Quality black tea varieties for a classic, robust cup.</p><div class="product-price"><span>Ask us for</span><strong>Current pricing</strong></div><a class="product-link" href="#wholesale" data-product-link="Black Tea">Enquire about this tea <span>↗</span></a></div>
-          </article>
-          <article class="product-card" data-category="coffee" data-name="Coffee Powder">
-            <div class="product-photo"><img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=750&q=80" alt="Freshly roasted coffee beans" loading="lazy"><span class="product-tag">FOR COFFEE PEOPLE</span><button class="quick-enquire" data-product="Coffee Powder" aria-label="Enquire about Coffee Powder">↗</button></div>
-            <div class="product-info"><div class="product-name"><h3>Coffee Powder</h3><span>07</span></div><p>Quality coffee powder for coffee lovers and businesses.</p><div class="product-price"><span>Ask us for</span><strong>Current pricing</strong></div><a class="product-link" href="#wholesale" data-product-link="Coffee Powder">Enquire about coffee <span>↗</span></a></div>
-          </article>
-          <p class="no-results" id="no-results" hidden>No products match that search. Try another name or category.</p>
-        </div>
-        <p class="price-note">Prices shown are indicative starting prices. Final wholesale pricing depends on quantity, packaging and current availability. Please enquire for a current quote.</p>
-      </section>
-
-      <section class="wholesale" id="wholesale">
-        <div class="wholesale-image" role="img" aria-label="Tea plantation rows stretching across the hills"></div>
-        <div class="wholesale-content">
-          <div class="eyebrow eyebrow-light"><span></span> GOOD PARTNERSHIPS, BREWED HERE</div>
-          <h2>Your trusted<br>wholesale tea <em>partner.</em></h2>
-          <p>Stocking a shop, refreshing your menu or sourcing for your business? Tell us what you need and we’ll help you explore the right products and a current wholesale quote.</p>
-          <div class="client-list"><span>TEA SHOPS</span><span>HOTELS & RESTAURANTS</span><span>SUPERMARKETS</span><span>GROCERS & RETAILERS</span><span>DISTRIBUTORS</span><span>BULK BUYERS</span></div>
-          <a class="button button-gold" href="#enquiry">Request wholesale pricing <span>↗</span></a>
-        </div>
-        <div class="wholesale-side">BUILT ON TRUST. SERVED WITH CARE.</div>
-      </section>
-
-      <section class="why section-pad">
-        <div class="why-title"><div class="eyebrow"><span></span> THE SIVA SAI DIFFERENCE</div><h2>Good business<br>starts with <em>good tea.</em></h2></div>
-        <div class="why-grid">
-          <article><span class="why-icon">✳</span><span class="why-num">01 / ROOTED</span><h3>Here since 1996</h3><p>Nearly three decades of local business, built one customer relationship at a time.</p></article>
-          <article><span class="why-icon">◌</span><span class="why-num">02 / SELECTION</span><h3>A little of everything</h3><p>From Assam CTC and leaf tea to green tea, Nilgiri, black tea and coffee.</p></article>
-          <article><span class="why-icon">↗</span><span class="why-num">03 / WHOLESALE</span><h3>Ready for your business</h3><p>Wholesale and bulk enquiries welcome, with flexible product and packaging conversations.</p></article>
-          <article><span class="why-icon">⌂</span><span class="why-num">04 / RELIABILITY</span><h3>People you can reach</h3><p>Dependable local service and a team that’s happy to talk through your requirements.</p></article>
-        </div>
-      </section>
-
-      <section class="gallery-section section-pad" id="gallery">
-        <div class="gallery-heading"><div><div class="eyebrow"><span></span> A FEAST FOR THE SENSES</div><h2>Little moments.<br><em>Lovely brews.</em></h2></div><p>Good ingredients, a little patience, and a cup you’ll want to linger over.</p></div>
-        <div class="gallery-grid">
-          <figure class="gallery-item gallery-large"><img src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=85" alt="Tea leaves and freshly brewed tea" loading="lazy"><figcaption>01 <span>THE PERFECT POUR</span></figcaption></figure>
-          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1562547256-2c5ee93b60b7?auto=format&fit=crop&w=800&q=80" alt="Tea being brewed in a glass teapot" loading="lazy"><figcaption>02 <span>TAKE A MOMENT</span></figcaption></figure>
-          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?auto=format&fit=crop&w=800&q=80" alt="A warm cup of coffee on a table" loading="lazy"><figcaption>03 <span>COFFEE, TOO</span></figcaption></figure>
-          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=800&q=80" alt="Sunlit green tea plantation" loading="lazy"><figcaption>04 <span>FROM THE GARDEN</span></figcaption></figure>
-          <figure class="gallery-item"><img src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?auto=format&fit=crop&w=800&q=80" alt="Fresh coffee beans ready to be ground" loading="lazy"><figcaption>05 <span>THE DAILY RITUAL</span></figcaption></figure>
-        </div>
-      </section>
-
-      <section class="enquiry-section section-pad" id="enquiry">
-        <div class="enquiry-intro">
-          <div class="eyebrow eyebrow-light"><span></span> LET'S MAKE SOMETHING GOOD</div>
-          <h2>Tell us what<br>you’re <em>looking for.</em></h2>
-          <p>Share a few details and we’ll help you find the right tea or coffee for your business.</p>
-          <div class="enquiry-note"><span>✳</span><p><strong>A note on quotes</strong><br>Availability, packaging and wholesale pricing can change. We’ll confirm the details with you directly.</p></div>
-        </div>
-        <form class="enquiry-form" id="enquiry-form">
-          <div class="form-row"><label>Your name<input name="customerName" autocomplete="name" required placeholder="How should we address you?"></label><label>Business name<input name="businessName" autocomplete="organization" placeholder="Your business (if applicable)"></label></div>
-          <div class="form-row"><label>Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number"></label><label>Product / topic<select name="product"><option value="">Choose a product or topic</option><option>Assam CTC Tea Powder</option><option>Assam Leaf Tea</option><option>Green Tea Leaves</option><option>Mint Green Tea</option><option>Nilgiri Tea</option><option>Black Tea</option><option>Coffee Powder</option><option>Multiple products / not sure</option><option>Feedback / suggestion</option></select></label></div>
-          <div class="form-row"><label>Required quantity<input name="quantity" placeholder="e.g. 10 kg, 50 packs"></label><label class="message-label">A little more about your enquiry<textarea name="message" rows="3" placeholder="Packaging, delivery or anything else we should know?"></textarea></label></div>
-          <button type="submit" class="button button-gold form-submit">Send your enquiry on WhatsApp <span>↗</span></button>
-          <p class="form-privacy">Your details are used only to respond to this enquiry. Submitting opens WhatsApp with your message ready to send.</p>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-
-      <section class="contact-section section-pad" id="contact">
-        <div class="contact-copy"><div class="eyebrow"><span></span> COME SAY HELLO</div><h2>Good tea starts<br>with <em>a conversation.</em></h2><p>Talk to us about our range, packaging and wholesale availability. We’d love to hear what you’re looking for.</p>
-          <div class="contact-details"><div class="contact-detail"><span class="detail-icon">⌖</span><div><small>FIND US IN RAJAHMUNDRY</small><p>Mangalavaripeta / T. Nagar,<br>Beside SBI, Rajahmundry,<br>Andhra Pradesh, India.</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Siva+Sai+Enterprises+Mangalavaripeta+T.+Nagar+Beside+SBI+Rajahmundry+Andhra+Pradesh+India" target="_blank" rel="noopener noreferrer" class="text-link">Open in Google Maps ↗</a></div></div><div class="contact-detail"><span class="detail-icon">◷</span><div><small>HERE TO HELP</small><p>For product details, current availability<br>or a wholesale conversation.</p><a href="#enquiry" class="text-link">Send us an enquiry ↗</a></div></div></div>
-        </div>
-        <div class="map-card"><iframe title="Map showing Siva Sai Enterprises in Rajahmundry" src="https://maps.google.com/maps?q=Mangalavaripeta%2C%20Rajahmundry%2C%20Andhra%20Pradesh%2C%20India&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-caption"><span class="map-pin">⌖</span><div><strong>Siva Sai Enterprises</strong><small>Mangalavaripeta / T. Nagar, Rajahmundry</small></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Siva+Sai+Enterprises+Mangalavaripeta+T.+Nagar+Beside+SBI+Rajahmundry+Andhra+Pradesh+India" target="_blank" rel="noopener noreferrer" aria-label="Open location in Google Maps">↗</a></div></div>
-      </section>
-
-      <section class="closing-banner"><div class="closing-ornament">✳</div><p>A GOOD CUP IS ALWAYS A GOOD IDEA.</p><h2>Let’s find yours.</h2><a href="#products" class="button button-light">Explore the selection <span>↗</span></a></section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-main">
-        <div class="footer-brand"><a class="brand brand-light" href="#home"><span class="brand-mark">S<span>✳</span></span><span class="brand-copy"><strong>SIVA SAI</strong><small>ENTERPRISES · RAJAHMUNDRY</small></span></a><p>A little more joy in every cup.<br>Trusted local tea and coffee supply since 1996.</p></div>
-        <div class="footer-column"><strong>EXPLORE</strong><a href="#about">Our story</a><a href="#products">Tea & coffee</a><a href="#wholesale">Wholesale</a><a href="#gallery">Gallery</a></div>
-        <div class="footer-column"><strong>LET'S TALK</strong><a href="#contact">Visit us in Rajahmundry</a><a href="#enquiry">Wholesale enquiries</a><a href="https://wa.me/?text=Hello%20Siva%20Sai%20Enterprises%2C%20I%20am%20interested%20in%20your%20tea%20and%20coffee%20products.%20Please%20share%20your%20wholesale%20prices%20and%20product%20details." target="_blank" rel="noopener noreferrer">WhatsApp us ↗</a></div>
-        <div class="footer-column"><strong>FIND US</strong><span>Mangalavaripeta / T. Nagar,<br>Beside SBI, Rajahmundry,<br>Andhra Pradesh, India.</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Siva+Sai+Enterprises+Mangalavaripeta+T.+Nagar+Beside+SBI+Rajahmundry+Andhra+Pradesh+India" target="_blank" rel="noopener noreferrer">Get directions ↗</a></div>
-      </div>
-      <div class="footer-bottom"><span>© <span id="current-year"></span> Siva Sai Enterprises. Made with care in Rajahmundry.</span><span>GOOD TEA. GOOD COMPANY. SINCE 1996.</span><a href="#home">Back to top ↑</a></div>
-    </footer>
-
-    <a class="whatsapp-float" id="whatsapp-float" href="https://wa.me/?text=Hello%20Siva%20Sai%20Enterprises%2C%20I%20am%20interested%20in%20your%20tea%20and%20coffee%20products.%20Please%20share%20your%20wholesale%20prices%20and%20product%20details." target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp"><span class="whatsapp-icon" aria-hidden="true">◉</span><span>Let’s chat</span></a>
-
-    <div class="assistant-widget">
-      <section class="assistant-panel" id="assistant-panel" aria-label="Siva Sai assistant" hidden>
-        <div class="assistant-header"><span class="bot-avatar">✳</span><div><strong>Siva Sai Concierge</strong><small><span class="online-dot"></span> Here to help</small></div><button class="assistant-close" aria-label="Close assistant">×</button></div>
-        <div class="assistant-messages" id="assistant-messages" aria-live="polite"><div class="bot-message">Namaste! Welcome to Siva Sai Enterprises ☕<br><br>I can help you explore our teas and coffee, or point you toward a wholesale enquiry. What are you looking for today?</div></div>
-        <div class="assistant-choices"><button data-reply="products">Explore products</button><button data-reply="wholesale">Wholesale pricing</button><button data-reply="location">Our location</button><button data-reply="feedback">Share feedback</button></div>
-        <form class="assistant-input" id="assistant-form"><label class="sr-only" for="assistant-text">Ask the assistant a question</label><input id="assistant-text" placeholder="Write us a note..." autocomplete="off"><button aria-label="Send message" type="submit">↑</button></form>
-        <p class="assistant-disclaimer">A friendly guide to the site — we’ll confirm details with you directly.</p>
-      </section>
-      <button class="assistant-launcher" id="assistant-launcher" aria-expanded="false" aria-controls="assistant-panel"><span class="launcher-robot">✳</span><span>Say hello</span><i class="launcher-dot"></i></button>
     </div>
+
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title">
+      <form id="contact-form" method="dialog">
+        <div class="dialog-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> SAFETY CONTACT</div><h2 id="contact-dialog-title">Who should we reach?</h2></div><button class="dialog-close" type="button" aria-label="Close dialog" data-close-dialog>×</button></div>
+        <p class="dialog-copy">Save someone you trust. This preview will not contact them automatically.</p>
+        <label class="field-label" for="contact-name">Contact name</label><input class="dialog-input" id="contact-name" name="name" autocomplete="name" required maxlength="60" placeholder="e.g. Sam">
+        <label class="field-label" for="contact-phone">Phone number</label><input class="dialog-input" id="contact-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="e.g. +91 98765 43210">
+        <div class="dialog-actions"><button class="button button-light" type="button" data-close-dialog>Cancel</button><button class="button button-dark" type="submit">Save contact <span>↗</span></button></div>
+      </form>
+    </dialog>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
   </body>
